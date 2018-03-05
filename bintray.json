@@ -11,7 +11,7 @@
 
     "files":
         [
-        {"includePattern": "./(*.tar.gz)", "uploadPattern": "$1", 
+        {"includePattern": "./(*.gz)", "uploadPattern": "$1", 
            "matrixParams": {
            "override": 1 }}
 	    ],
