@@ -1,0 +1,11 @@
+*.py[co]
+.*.sw[po]
+*.exe
+venv
+
+/build
+/dist
+dist.7z
+.*
+!.travis.yml
+!.appveyor.yml
