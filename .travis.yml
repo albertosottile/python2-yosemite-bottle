@@ -19,7 +19,7 @@ before_deploy:
 - ls *.tar.gz -al
 
 deploy:
-  on: master_local
+  on: master
   provider: bintray
   file: "bintray.json"
   user: alby128
