@@ -6,20 +6,20 @@ branches:
   - master
 
 script:
-- mkdir build
-- cd build
-- brew bottle --json python@2
-- cd ..
+- brew bottle pkg-config readline sqlite gdbm makedepend openssl python@2
 #- brew test python@2
 
 before_install:
 - brew update
 
 install:
-- brew install --build-bottle python@2
+- brew install --build-bottle pkg-config readline sqlite gdbm makedepend openssl python@2
+- mkdir build
+- cd build
 
 before_deploy:
-- ls build -al
+- cd ..
+- ls -al build
 
 deploy:
   on: master
