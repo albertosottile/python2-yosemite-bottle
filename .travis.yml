@@ -16,7 +16,7 @@ install:
 - brew install --build-bottle python@2
 
 before_deploy:
-- ls *.gz -al
+- ls -al *.gz
 
 deploy:
   on: master
