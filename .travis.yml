@@ -6,7 +6,10 @@ branches:
   - master
 
 script:
+- mkdir build
+- cd build
 - brew bottle --json python@2
+- cd ..
 #- brew test python@2
 
 before_install:
@@ -16,7 +19,7 @@ install:
 - brew install --build-bottle python@2
 
 before_deploy:
-- ls -al *.gz
+- ls build -al
 
 deploy:
   on: master
