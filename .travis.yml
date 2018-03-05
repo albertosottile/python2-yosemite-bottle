@@ -7,7 +7,7 @@ branches:
 
 script:
 - brew bottle --json python@2
-- brew test python@2
+#- brew test python@2
 
 before_install:
 - brew update
