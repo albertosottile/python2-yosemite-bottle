@@ -6,7 +6,6 @@ branches:
   - master
 
 script:
-%- export PATH="/usr/local/opt/python@2/bin:$PATH"
 - brew bottle --json python@2
 - brew test python@2
 
