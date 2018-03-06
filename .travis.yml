@@ -3,16 +3,21 @@ osx_image: xcode6.4
 
 branches:
   only:
-  - bashscript
+  - bashrestore
 
 script:
-- travis/cache-homebrew
+- which python2
+- python2 --version
+- which pip2
+- pip2 --version
+- python2 -c "from datetime import datetime; print datetime.now()" 
 
 before_install:
 - brew update
 
 install:
-- brew install python@2
+- travis/download-homebrew
+- export PATH="/usr/local/opt/python@2/bin:$PATH"
 
 before_deploy:
 - ls -al travis-cache
