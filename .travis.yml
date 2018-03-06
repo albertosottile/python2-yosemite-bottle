@@ -3,7 +3,7 @@ osx_image: xcode6.4
 
 branches:
   only:
-  - master
+  - bashscript
 
 script:
 - travis/cache-homebrew
@@ -18,7 +18,7 @@ before_deploy:
 - ls -al travis-cache
 
 deploy:
-  on: master
+  on: bashscript
   provider: bintray
   file: "bintray.json"
   user: alby128
