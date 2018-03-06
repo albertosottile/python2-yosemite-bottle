@@ -18,6 +18,7 @@ before_install:
 install:
 - travis/download-homebrew
 - export PATH="/usr/local/opt/python@2/bin:$PATH"
+- travis/download-python
 
 before_deploy:
 - ls -al travis-cache
