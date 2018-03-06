@@ -6,20 +6,16 @@ branches:
   - master
 
 script:
-- brew bottle pkg-config readline sqlite gdbm makedepend openssl python@2
-#- brew test python@2
+- travis/cache-homebrew
 
 before_install:
 - brew update
 
 install:
-- brew install --build-bottle pkg-config readline sqlite gdbm makedepend openssl python@2
-- mkdir build
-- cd build
+- brew install python@2
 
 before_deploy:
-- cd ..
-- ls -al build
+- ls -al travis-cache
 
 deploy:
   on: master

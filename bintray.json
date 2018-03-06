@@ -11,7 +11,7 @@
 
     "files":
         [
-        {"includePattern": "build/(.*)", "uploadPattern": "$1", 
+        {"includePattern": "travis-cache/(.*)", "uploadPattern": "$1", 
            "matrixParams": {
            "override": 1 }}
 	    ],
