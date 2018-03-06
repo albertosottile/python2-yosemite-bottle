@@ -10,7 +10,8 @@ script:
 - python2 --version
 - which pip2
 - pip2 --version
-- python2 -c "from datetime import datetime; print datetime.now()" 
+- python2 -c "from datetime import datetime; print datetime.now()"
+- pip2 install twisted appnope pyobjc py2app  
 
 before_install:
 - brew update
