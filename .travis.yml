@@ -19,6 +19,7 @@ before_deploy:
 - ls -al travis-cache
 
 deploy:
+  skip_cleanup: true
   on: bashscript
   provider: bintray
   file: "bintray.json"
